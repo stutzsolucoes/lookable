@@ -1,0 +1,8 @@
+{
+  "name": "Lookable",
+  "description": "Man fashion advisor",
+  "repository": "https://github.com/stutzsolucoes/lookable",
+  "logo": "http://lookable.herokuapp.com/public/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
