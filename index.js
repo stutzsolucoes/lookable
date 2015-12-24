@@ -2,7 +2,7 @@ var path = require('path');
 var express = require ('express');
 
 const server = global.server = express();
-const port = process.env.LOOKABLE_PORT || 80;
+const port = process.env.PORT || 80;
 server.set('port', port);
 
 //
