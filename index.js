@@ -8,7 +8,7 @@ server.set('port', port);
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
-server.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static(path.join(__dirname, '/')));
 
 //
 // Launch the server
