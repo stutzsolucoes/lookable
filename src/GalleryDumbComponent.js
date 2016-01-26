@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalDumbComponent from './ModalDumbComponent.js';
 
 var GalleryDumbComponent = React.createClass({
 
@@ -10,7 +11,7 @@ var GalleryDumbComponent = React.createClass({
     var galleryNodes = this.props.data.map(function(looks) {
 
       return (
-        <div className="col-md-4 col-sm-6 portfolio-item" key={looks.id}>
+        <div className="col-md-4 col-sm-6 portfolio-item" key={looks.id} onClick={handleClick}>
             <a href={"#"+looks.id} className="portfolio-link" data-toggle="modal">
                 <div className="portfolio-hover">
                     <div className="portfolio-hover-content">
@@ -31,6 +32,8 @@ var GalleryDumbComponent = React.createClass({
       </div>
     );
   }
+
+  ReactDOM.render(<Modal/>, document.getElementById('galleryItemComponent'));
 });
 
 export default GalleryDumbComponent;
