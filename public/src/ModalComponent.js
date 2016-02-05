@@ -3,37 +3,17 @@ import ModalDumbComponent from './ModalDumbComponent.js';
 
 var ModalComponent = React.createClass({
 
-  getInitialState: function() {
-    return {data: [],
-            produto: []};
-  },
-
-  componentDidMount:function() {
-    var Look = Parse.Object.extend("Look");
-    var query = new Parse.Query(Look);
-    query.descending("createdAt");
-    query.find({
-      success: function(results){
-        this.setState({data: results});
-
-        var look = results[1];
-        var produtos = look.relation('produtos');
-        produtos.query().find({
-          success: function(produtos){
-            this.setState({produto: produtos});
-          }.bind(this)
-        });
-      }.bind(this),
-      error: function(error) {
-          alert("Error: " + error.code + " " + error.message);
-      }
-    });
-  },
-
   render: function() {
+    var modalNodes = this.props.data.map(function(looks) {
+      return (
+        <div key={looks.id} >
+              <ModalDumbComponent look={looks} />
+        </div>
+      );
+    });
     return (
       <div className="galleryBox">
-        <ModalDumbComponent data={this.state.data} produto={this.state.produto}/>
+        {modalNodes}
       </div>
     );
   }

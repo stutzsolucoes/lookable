@@ -35,7 +35,7 @@ var FeaturedDumbComponent = React.createClass({
         </div>
       );
     });
-    
+
     var itensNodes = this.props.produto.map(function(item){
         return (
               <div className="col-lg-3 col-xs-3" key={item.id}>

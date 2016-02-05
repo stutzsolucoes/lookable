@@ -1,5 +1,6 @@
 import React from 'react';
 import GalleryDumbComponent from './GalleryDumbComponent.js';
+import ModalComponent from './ModalComponent.js';
 
 var GalleryComponent = React.createClass({
 
@@ -24,7 +25,15 @@ var GalleryComponent = React.createClass({
   render: function() {
     return (
       <div className="galleryBox">
-        <GalleryDumbComponent data={this.state.data}/>
+        <section id="portfolio" className="bg-light-gray">
+          <div className="container">
+            <div className="lookList">
+              <GalleryDumbComponent data={this.state.data}/>
+            </div>
+          </div>
+        </section>
+
+        <ModalComponent data={this.state.data} />
       </div>
     );
   }
