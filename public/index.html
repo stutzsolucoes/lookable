@@ -13,6 +13,7 @@
 
     <!-- jQuery -->
     <!--<script src="js/jquery.js"></script>-->
+    <script src="src/state.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
@@ -70,7 +71,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo.png" style="height: 70px; position: relative; top: -30px;"></a>
+                <!--<a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo.png" style="height: 70px; position: relative; top: -30px;"></a>-->
+                <a class="navbar-brand page-scroll" href="#page-top" style="position: relative; top: -30px; color: #fff;"><h1>LOOKABLE</h1></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,20 +81,17 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll hidden" href="#services">Services</a>
+                    <li class="active" id="feat">
+                        <button class="page-scroll" value="featured" onclick="reply_click(this)">Featured</button>
+                    </li>
+                    <li id="famoso">
+                        <button class="page-scroll" value="famoso" onclick="reply_click(this)">Famosos</button>
+                    </li>
+                    <li id="ocasiao">
+                        <button class="page-scroll" value="ocasiao" onclick="reply_click(this)">Ocasiões</button>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Featured</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Famosos</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="">Ocasiões</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="">Sobre nós</a>
+                        <a class="page-scroll" href="index-app.html">O lookable</a>
                     </li>
                 </ul>
             </div>
@@ -164,7 +163,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
@@ -174,6 +173,18 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+
+    <!-- Check Buttons usados para filtrar os resultados da galeria de looks -->
+    <script type="text/javascript">
+        function reply_click(component)
+        {
+            $(component).parent().addClass("active");
+            $(component).parent().siblings().removeClass("active");
+            $(component).blur();
+
+            _globalState.setCurrentCategory(component.value);
+        }
+    </script>
 
 </body>
 

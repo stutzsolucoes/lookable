@@ -32,3 +32,23 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
   height: 82.375px;
   margin-bottom: 15px;
 }
+
+.navbar-default .nav li button {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: inherit;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    line-height: 20px;
+    border: 0;
+}
+
+.navbar-default .nav .active button {
+    background-color: #fed136;
+}
