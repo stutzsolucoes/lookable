@@ -7,13 +7,7 @@ var GalleryDumbComponent = React.createClass({
     return {category: 'featured'};
   },
 
-  componentWillMount: function() {
-    _globalState.addCurrentCategoryChangedListener(this.categoryChangedListener);
-  },
 
-  categoryChangedListener: function(newCategory){
-    this.setState({category: newCategory});
-  },
 
   render: function() {
     var rows = [];
