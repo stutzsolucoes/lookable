@@ -7,3 +7,11 @@ import App from './App';
 ReactDOM.render(<Featured/>, document.getElementById('featured'));
 ReactDOM.render(<App/>, document.getElementById('root'));
 //ReactDOM.render(<Modal/>, document.getElementById('galleryItemComponent'));
+
+//Gambiarra para poder usar a URL do navegador e o botao de voltar
+jQuery(window).on("popstate", function(event) {
+  if(event.originalEvent.state.id=="home" || event.originalEvent.state.origin == "home") {
+    jQuery(".close-modal").click();
+    history.pushState({id: "home"}, "Home", "/");
+  }
+});

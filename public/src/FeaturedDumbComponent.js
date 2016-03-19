@@ -7,6 +7,17 @@ var FeaturedDumbComponent = React.createClass({
             produto: []};
   },
 
+  componentDidUpdate: function() {
+    //Gambiarra para poder usar o historico do navegador (botao de voltar) e isso fazer o modal fechar
+    jQuery(".portfolio-link-feat").each(function(idx, link) {
+      jQuery(link).on("click", function() {
+        history.pushState({id: jQuery(this).attr("data-url-description"), origin: "home"}, 'look', jQuery(this).attr("data-url-description"));
+      })
+    });
+
+  },
+
+
   render: function() {
     var featNodes = this.props.data.map(function(feat) {
       var timelineImage = {
@@ -14,13 +25,13 @@ var FeaturedDumbComponent = React.createClass({
       };
       return (
         <div key={feat.id}>
-          <a href={"#"+feat.id} className="portfolio-link" data-toggle="modal">
+          <a href={"#"+feat.id} className="portfolio-link portfolio-link-feat" data-toggle="modal" data-url-description={"#"+feat.id}>
             <div className="timeline-image" style={timelineImage}>
 
             </div>
           </a>
           <div className="timeline-panel" >
-              <a href={"#"+feat.id} className="portfolio-link" data-toggle="modal">
+              <a href={"#"+feat.id} className="portfolio-link portfolio-link-feat" data-toggle="modal" data-url-description={"#"+feat.id}>
                 <div className="look-novo">
                     <button type="button" className="btn btn-primary" >{feat.createdAt.toLocaleString().slice(0,10)}</button>
                 </div>
@@ -30,7 +41,7 @@ var FeaturedDumbComponent = React.createClass({
               </div>
               <div className="timeline-body">
                   <p className="text-muted">{feat.get("descricao")}...</p> <br />
-                  <a href={"#"+feat.id} className="" data-toggle="modal">
+                  <a href={"#"+feat.id} className="portfolio-link-feat" data-toggle="modal" data-url-description={"#"+feat.id}>
                       <strong>Continue lendo</strong>
                   </a>
               </div>

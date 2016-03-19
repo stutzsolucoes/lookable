@@ -18,6 +18,13 @@ var ModalDumbComponent = React.createClass({
       });
   },
 
+  componentDidUpdate: function() {
+    //Gambiarra para que a URL do navegador fique no "/" ao fechar o modal, representando que está na home
+    jQuery(".close-modal").on("click", function() {
+      history.pushState({id: "home"}, "Home", "/");
+    });
+  },
+
   render: function() {
       var produtoNodes = this.state.produto.map(function(item) {
         return (
@@ -53,7 +60,7 @@ var ModalDumbComponent = React.createClass({
                                 <img className="img-responsive img-centered img-look" src={this.props.look.get("url_imagem")} alt={this.props.look.get("titulo")} />
 
                                 <div dangerouslySetInnerHTML={{__html: this.props.look.get("html_content")}} />
-                                
+
                                 <div className="row">
                                     {produtoNodes}
                                 </div>
