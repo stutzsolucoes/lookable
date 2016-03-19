@@ -29,7 +29,10 @@ var FeaturedDumbComponent = React.createClass({
                   <h4>{feat.get("titulo")}</h4>
               </div>
               <div className="timeline-body">
-                  <p className="text-muted">{feat.get("descricao")}</p>
+                  <p className="text-muted">{feat.get("descricao")}...</p> <br />
+                  <a href={"#"+feat.id} className="" data-toggle="modal">
+                      <strong>Continue lendo</strong>
+                  </a>
               </div>
           </div>
         </div>
@@ -63,4 +66,6 @@ export default FeaturedDumbComponent;
   <li><strong></strong></li> </br>
   <li></li>
 </ul>
+
+
 */
