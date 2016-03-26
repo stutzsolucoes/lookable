@@ -71,3 +71,7 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
 .x-next {
   position: fixed; right:100px; top: 50%;
 }
+
+.portfolio-modal .modal-content .container .html_content img {
+  max-width: 100%;
+}

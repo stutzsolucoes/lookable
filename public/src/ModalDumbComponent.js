@@ -59,7 +59,7 @@ var ModalDumbComponent = React.createClass({
                                 <p className="item-intro text-muted">{this.props.look.get("descricao")}.</p>
                                 <img className="img-responsive img-centered img-look" src={this.props.look.get("url_imagem")} alt={this.props.look.get("titulo")} />
 
-                                <div dangerouslySetInnerHTML={{__html: this.props.look.get("html_content")}} />
+                                <div className="html_content" dangerouslySetInnerHTML={{__html: this.props.look.get("html_content")}} />
 
                                 <div className="row">
                                     {produtoNodes}
