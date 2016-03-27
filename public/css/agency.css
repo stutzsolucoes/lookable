@@ -6,9 +6,9 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
               border-radius: 150px;
               -webkit-border-radius: 150px;
               -moz-border-radius: 150px;
-              background-position-x: 50%;
+              background-position-x: 65%;
               background-position-y: 0%;
-              background-size: 160px;
+              background-size: 120%;
 }
 
 .itens {

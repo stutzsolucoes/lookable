@@ -31,7 +31,7 @@ var ModalDumbComponent = React.createClass({
           <div className="col-lg-4" key={item.id}>
               <img className="img-responsive img-centered itens" src={item.get("url_imagem")} alt="" />
               <ul className="list-inline">
-                  <li><strong>{item.get("nome")}</strong></li>
+                  <li><strong>{item.get("nome")}</strong></li> <br/>
                   <li>R$ {item.get("preco")}</li>
               </ul>
               <a href={item.get("url_loja")} target="_blank" title={item.get("nome")+" R$ "+item.get("preco")}>
