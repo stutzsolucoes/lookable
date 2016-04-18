@@ -28,7 +28,7 @@ var ModalDumbComponent = React.createClass({
   render: function() {
       var produtoNodes = this.state.produto.map(function(item) {
         return (
-          <div className="col-lg-4" key={item.id}>
+          <div className="col-lg-4 produto-item-list" key={item.id}>
               <img className="img-responsive img-centered itens" src={item.get("url_imagem")} alt="" />
               <ul className="list-inline">
                   <li><strong>{item.get("nome")}</strong></li> <br/>
