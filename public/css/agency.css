@@ -33,8 +33,15 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
   }
 }
 @media (max-width:768px){
-  .featList .itens {
+  /*.featList .itens {
      display: none;
+  }*/
+  .featList .itens {
+     left: -130px;
+     top: 50px;
+  }
+  .mailchimp-form {
+    padding-left: 0%;
   }
 }
 
@@ -78,4 +85,9 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
 
 .produto-item-list {
   margin-top: 50px;
+}
+
+
+.mailchimp-form {
+  padding-left: 15%;
 }

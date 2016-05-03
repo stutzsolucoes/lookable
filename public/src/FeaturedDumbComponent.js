@@ -64,7 +64,23 @@ var FeaturedDumbComponent = React.createClass({
       <div className="featList">
         {featNodes}
         <div className="timeline-panel itens row">
-          {itensNodes}
+          <div className="mailchimp-form">
+              {/* Begin MailChimp Signup Form */}
+              <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css" />
+              <style type="text/css" dangerouslySetInnerHTML={{__html: "\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\n\t/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\n" }} />
+              <div id="mc_embed_signup">
+                <form action="//stutzsolucoes.us7.list-manage.com/subscribe/post?u=e143f3fc9fb806387f5433cd3&id=519496764a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                  <div id="mc_embed_signup_scroll">
+                    <label htmlFor="mce-EMAIL">Receba semanalmente no seu email</label>
+                    <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email" required />
+                    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
+                    <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true"><input type="text" name="b_e143f3fc9fb806387f5433cd3_519496764a" tabIndex={-1} defaultValue /></div>
+                    <div className="clear"><input type="submit" defaultValue="Assinar" name="subscribe" id="mc-embedded-subscribe" className="button" /></div>
+                  </div>
+                </form>
+              </div>
+              {/*End mc_embed_signup*/}
+          </div>
         </div>
       </div>
     );
