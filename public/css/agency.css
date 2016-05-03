@@ -91,3 +91,9 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
 .mailchimp-form {
   padding-left: 15%;
 }
+
+/* Imagem de galeria */
+
+.portfolio-link-gallery img{
+  width: 100%;
+}
